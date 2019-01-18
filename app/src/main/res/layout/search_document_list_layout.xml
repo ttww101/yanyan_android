@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/top_bar_color">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@null"
+            android:layout_alignParentLeft="true"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:text="@string/title_search"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@null"
+            android:textColor="@color/search_color"/>
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/button_search"
+            android:layout_toRightOf="@id/button_back"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_search_iput"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textSize="14sp"
+            android:paddingLeft="@dimen/top_bar_height"
+            android:paddingRight="17dp"
+            android:hint="@string/hint_search">
+            <requestFocus/>
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/button_clear"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_bar_height"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:background="@null"
+            android:src="@drawable/icon_clear"/>
+
+        <ImageView
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:src="@drawable/icon_search_style"
+            android:padding="7dp"
+            android:layout_marginLeft="@dimen/top_bar_height"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/document_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent_full"
+            android:cacheColorHint="@color/transparent_full"
+            android:fadingEdge="none"
+            android:dividerHeight="1px"
+            android:divider="@color/home_line_color"
+            android:fastScrollEnabled="false"
+            android:smoothScrollbar="false"
+            android:listSelector="?android:attr/selectableItemBackground"
+            android:scrollbars="none"/>
+
+        <LinearLayout
+            android:id="@+id/query_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white_color"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/query_proLoading"
+                style="@style/QueryLoadingProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@anim/query_loading_gray" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

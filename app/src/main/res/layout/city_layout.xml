@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/top_bar_color">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@null"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_select_city"
+            android:textColor="@color/top_title_color"
+            android:textSize="@dimen/top_title_size" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/white_color">
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_centerVertical="true"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_search_iput2"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textSize="14sp"
+            android:paddingLeft="@dimen/top_bar_height"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:paddingRight="17dp"
+            android:hint="@string/search_city">
+            <requestFocus/>
+        </EditText>
+        <ImageView
+            android:id="@+id/search_icon_view"
+            android:layout_marginLeft="7dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:src="@drawable/icon_search_style"
+            android:padding="7dp"/>
+
+        <ImageButton
+            android:id="@+id/button_clear"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:layout_marginRight="7dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:background="@null"
+            android:src="@drawable/icon_clear"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/home_line_color"></View>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/location_city_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="@dimen/top_bar_height"
+                android:layout_height="@dimen/top_bar_height"
+                android:src="@drawable/icon_location"
+                android:padding="7dp"/>
+
+            <TextView
+                android:id="@+id/location_city_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/home_text_deep_color"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_below="@id/location_city_layout"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/home_line_color"></View>
+
+        <TextView
+            android:id="@+id/hot_city_title_view"
+            android:layout_below="@id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/home_text_deep_color"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="17dp"
+            android:text="@string/hot_city"/>
+
+        <com.ccaaii.base.utils.widgets.GridViewForScrollView
+            android:id="@+id/hot_city_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_below="@id/hot_city_title_view"
+            android:listSelector="?android:attr/selectableItemBackground"
+            android:fadingEdgeLength="0dp"
+            android:numColumns="4"></com.ccaaii.base.utils.widgets.GridViewForScrollView>
+
+        <ListView
+            android:id="@+id/search_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:background="@color/white_color"
+            android:cacheColorHint="@color/transparent_full"
+            android:fadingEdge="none"
+            android:dividerHeight="1px"
+            android:divider="@color/home_line_color"
+            android:fastScrollEnabled="false"
+            android:smoothScrollbar="false"
+            android:headerDividersEnabled="false"
+            android:footerDividersEnabled="true"
+            android:listSelector="?android:attr/selectableItemBackground"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+</LinearLayout>

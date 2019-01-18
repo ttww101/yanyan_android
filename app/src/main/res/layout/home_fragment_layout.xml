@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent_full"
+        android:cacheColorHint="@color/transparent_full"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:fillViewport="true"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="@drawable/image_scroll_bar"
+        android:smoothScrollbar="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/home_bg_color"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_slide_default" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/viewGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"></LinearLayout>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/weather_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_weather_big"
+                android:orientation="vertical"
+                android:paddingBottom="7dp"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingTop="7dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/city_name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/init_location"
+                        android:textColor="@color/white_color"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/white_color"></View>
+
+                    <TextView
+                        android:id="@+id/date_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="--"
+                        android:textColor="@color/white_color"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/weather_image_view"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/weather_img_999" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/weather_con_tmp_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/weather_wind_hum_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/white_color"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/white_color"></View>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/weather_qlty_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/weather_aqi_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/white_color"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="17dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/hot_documents"
+                android:background="@color/white_color"
+                android:gravity="center_vertical"
+                android:textColor="@color/home_text_light_color"
+                android:textSize="14sp"></TextView>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/home_line_color"></View>
+
+            <com.ccaaii.base.utils.widgets.ListViewForScrollView
+                android:id="@+id/hot_document_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_color"
+                android:cacheColorHint="@color/transparent_full"
+                android:divider="@color/home_line_color"
+                android:dividerHeight="1px"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:focusable="false"
+                android:listSelector="?android:attr/selectableItemBackground"
+                android:focusableInTouchMode="false"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="false"
+                android:scrollbars="none"
+                android:smoothScrollbar="true">
+
+
+            </com.ccaaii.base.utils.widgets.ListViewForScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

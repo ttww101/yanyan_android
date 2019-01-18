@@ -1,0 +1,389 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '28.0.3'
+    useLibrary 'org.apache.http.legacy'
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.ccaaii.yanyan.android"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 100
+        versionName "V1.0.0"
+        flavorDimensions 'versionCode'
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+        }
+        // dex突破65535的限制
+        multiDexEnabled true
+        manifestPlaceholders= [
+                               JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                               JPUSH_CHANNEL:"developer-default",
+                               JPUSH_PKGNAME : applicationId]
+    }
+
+    signingConfigs {
+        myConfig {
+            /*
+            storeFile file("android.keystore")
+            storePassword "kandashan"
+            keyAlias "android.keystore"
+            keyPassword "kandashan"
+            v2SigningEnabled false
+            */
+            storeFile file(project.rootDir.absolutePath + "/app/channelKey.jks")
+            storePassword "000000"
+            keyAlias "key"
+            keyPassword "000000"
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "SERVER_URL", "\"www.ddaaweb.com:8080\""
+            buildConfigField "String", "WEB_PROJECT_NAME", "\"kandashan_api\""
+            buildConfigField "String", "API_URL_V2", "\"https://leancloud.cn:443/1.1\""
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.myConfig
+            buildConfigField "String", "SERVER_URL", "\"www.ddaaweb.com:8080\""
+            buildConfigField "String", "WEB_PROJECT_NAME", "\"kandashan_api\""
+            buildConfigField "String", "API_URL_V2", "\"https://leancloud.cn:443/1.1\""
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile './src/main/AndroidManifest.xml'
+            java.srcDirs = ['./src/main/java']
+            resources.srcDirs = ['./src/main/res']
+            res.srcDirs = ['./src/main/res']
+            assets.srcDirs = ['./src/main/assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        shenghuotong_anzhi {
+            manifest.srcFile './src/main/AndroidManifest.xml'
+            java.srcDirs = ['./src/main/java']
+            resources.srcDirs = ['./src/main/res']
+            res.srcDirs = ['./src/shenghuotong_anzhi/res']
+            assets.srcDirs = ['./src/main/assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+        shenghuotong_360 {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "360"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "KY69DZN88M8PM6YS96BB"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_360",
+                    JPUSH_PKGNAME : applicationId]
+        }
+
+        shenghuotong_huawei {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 24
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "huawei"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "VGC4J5NFQ6MBP88Z9776"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_huawei",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_xiaomi {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "xiaomi"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "W4KKNJHSVF6MNYW49DS3"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_xiaomi",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_flyme {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "flyme"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "YPQRYMWT7FXFTJRCCDRK"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_flyme",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_qq {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "qq"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "BBCY58S6F7QWJZB5XXJ6"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_qq",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_vivo {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 17
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "vivo"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "JXW6Q6CS3Z73ZH45XQY8"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_vivo",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_anzhi {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "anzhi"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "W8P4NMVDJ4GGVXS2JH2J"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_anzhi",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_oppo {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "oppo"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "YTPX8X62FZNBR6MW8XMW"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_oppo",
+                    JPUSH_PKGNAME : applicationId]
+        }
+
+        shenghuotong_samsung {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "samsung"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "8FKC889H3B4MPZNWDQKR"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_samsung",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_ali {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "ali"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "YTPX8X62FZNBR6MW8XMW"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_ali",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_lenovo {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "lenovo"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "YTPX8X62FZNBR6MW8XMW"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_lenovo",
+                    JPUSH_PKGNAME : applicationId]
+        }
+        shenghuotong_baidu {
+            applicationId "com.ccaaii.yanyan.android"
+            minSdkVersion 19
+            targetSdkVersion 22
+            versionCode 100
+            versionName "V1.0.0"
+            flavorDimensions 'versionCode'
+            javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+            ndk {
+                //选择要添加的对应cpu类型的.so库。
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a' ,'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // dex突破65535的限制
+            multiDexEnabled true
+            resValue "string", "market_name", "baidu"
+            resValue "string", "brand_name", "shenghuotong"
+            resValue "string", "flurry_key", "YTPX8X62FZNBR6MW8XMW"
+            manifestPlaceholders= [
+                    appPackage: applicationId,
+                    JPUSH_APPKEY:"c420f4a9deed0abe2ac6387e",
+                    JPUSH_CHANNEL:"shenghuotong_baidu",
+                    JPUSH_PKGNAME : applicationId]
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+    //    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:23.2.1'
+    implementation 'com.android.support:design:23.2.1'
+    implementation 'com.android.support:support-v4:23.2.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation files('libs/mpandroidchartlibrary-2-2-4.jar')
+    implementation 'com.flurry.android:analytics:6.4.2'
+    //implementation 'cn.jiguang.sdk:jpush:3.0.9'  // 此处以JPush 3.0.9 版本为例。
+    //implementation 'cn.jiguang.sdk:jcore:1.1.7'  // 此处以JCore 1.1.7 版本为例。
+    implementation 'cn.jiguang.sdk:jpush:3.1.8'
+    implementation 'cn.jiguang.sdk:jcore:1.2.6'
+    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'com.orhanobut:logger:1.8'
+    implementation 'com.github.bumptech.glide:okhttp-integration:1.4.0'
+}

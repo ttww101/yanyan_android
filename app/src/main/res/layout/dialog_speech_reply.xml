@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="17dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_add_star"
+            android:textSize="14sp"
+            android:textColor="@color/home_text_light_color"/>
+
+        <ImageView
+            android:id="@+id/reply_star_01"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_reply_star"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/reply_star_02"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_reply_star"
+            android:padding="5dp"
+            android:layout_marginLeft="3dp"/>
+
+        <ImageView
+            android:id="@+id/reply_star_03"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_reply_star"
+            android:padding="5dp"
+            android:layout_marginLeft="3dp"/>
+
+        <ImageView
+            android:id="@+id/reply_star_04"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_reply_star"
+            android:padding="5dp"
+            android:layout_marginLeft="3dp"/>
+
+        <ImageView
+            android:id="@+id/reply_star_05"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_reply_star"
+            android:padding="5dp"
+            android:layout_marginLeft="3dp"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="7dp"
+        android:hint="@string/user_add_reply_hint"
+        android:background="@drawable/bg_suggestion_input"
+        android:focusable="true"
+        android:gravity="top"
+        android:imeOptions="flagNoEnterAction"
+        android:lines="4"
+        android:maxLength="200"
+        android:padding="7dp"
+        android:textSize="14sp" >
+
+        <requestFocus />
+    </EditText>
+
+</LinearLayout>

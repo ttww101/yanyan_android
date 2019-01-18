@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--     Copyright (C) 2011, RingCentral, Inc. All Rights Reserved. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_playbox_schedule" android:state_focused="true" android:state_pressed="false"/>
+    <item android:drawable="@drawable/icon_playbox_schedule_pressed" android:state_focused="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/icon_playbox_schedule_pressed" android:state_focused="false" android:state_pressed="true"/>
+    <item android:drawable="@drawable/icon_playbox_schedule"/>
+
+</selector>

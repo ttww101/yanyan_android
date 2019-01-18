@@ -1,0 +1,242 @@
+<resources>
+    <string name="app_name">燕燕北京赛车</string>
+
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_logout">退出</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_delete">删除</string>
+    <string name="dialog_send">发送</string>
+    <string name="dialog_submit">提交</string>
+    <string name="dialog_login">登录</string>
+
+    <string name="bottom_home">首页</string>
+    <string name="bottom_discovery">历史开奖</string>
+    <string name="bottom_setting">走势</string>
+    <string name="bottom_me">设定</string>
+
+    <string name="start_app">开启燕燕</string>
+    <string name="hot_documents">生活百科推荐</string>
+    <string name="new_documents">最新发布</string>
+    <string name="document_category">生活百科分类</string>
+
+    <string name="user_logout">退出登录</string>
+    <string name="user_login">立即登录</string>
+    <string name="user_login_tips">登录享用更多功能</string>
+    <string name="user_login_tips_qq">账号已登录，享受多彩生活！</string>
+    <string name="user_login_qq">QQ登录</string>
+
+    <string name="user_login_failed">登录失败，请重试</string>
+    <string name="user_login_points">登录中...</string>
+    <string name="user_login_first">请先登录</string>
+
+    <string name="title_user_info">账号信息</string>
+    <string name="title_suggestion">意见建议</string>
+    <string name="title_about">关于我们</string>
+    <string name="title_legal">用户协议</string>
+    <string name="title_share_app">推荐应用</string>
+    <string name="title_speech_detail">详情页</string>
+    <string name="title_speech_category">分类页</string>
+    <string name="title_login">账号登录</string>
+    <string name="user_head_image">头像</string>
+    <string name="user_nick_name">昵称</string>
+    <string name="hint_reply">请输入您的意见建议</string>
+    <string name="hint_reply_info">请输入您的联系方式（可选）</string>
+
+    <string name="dialog_title_logout">退出登录</string>
+    <string name="dialog_msg_logout">你确定要退出该账号？</string>
+    <string name="dialog_title_update_user_name">更新昵称</string>
+    <string name="dialog_title_update_head_image">更新头像</string>
+    <string name="update_head_image_take_photo">拍照上传</string>
+    <string name="update_head_image_get_photo">从手机相册选择</string>
+    <string name="submit_points">提交中...</string>
+    <string name="nick_name_is_empty">昵称不能为空</string>
+    <string name="toast_update_failed">更新失败</string>
+    <string name="cannot_take_photo_by_storage">未插入储存卡或手机空间不足</string>
+    <string name="modify_photo">更新头像</string>
+
+    <string name="setting_fav">我的收藏</string>
+    <string name="setting_reply">我的回复</string>
+    <string name="setting_history">阅读历史</string>
+    <string name="setting_share">推荐给好友</string>
+    <string name="setting_check">检查更新</string>
+    <string name="setting_suggestion">意见建议</string>
+    <string name="setting_app_list">热门应用</string>
+    <string name="setting_like">欢迎评分</string>
+    <string name="setting_about">关于我们</string>
+    <string name="check_updates">检查更新...</string>
+    <string name="loading_points">加载中...</string>
+    <string name="loading_failed">加载失败</string>
+
+    <string name="copyright">Copyright &#169;2015-2016 by xxx.com</string>
+    <string name="company_name">某某公司</string>
+    <string name="app_description">联系方式：8123321111 </string>
+    <string name="check_for_updates">检查更新</string>
+    <string name="title_user_agreement">用户协议</string>
+    <string name="accept_user_agreement">我已经阅读并接受&lt;strong>&lt;FONT COLOR=\'#337FE5\'>《用户协议》&lt;/FONT>&lt;/strong></string>
+    <string name="login_text">让生活多一点精彩！</string>
+    <string name="login_tips">我已经阅读并接受《用户协议》</string>
+    <string name="cannot_submit">提交失败</string>
+    <string name="submit_failed">提交失败</string>
+    <string name="submit_success">提交成功</string>
+    <string name="submit_suggestion_success">你的意见建议已提交，感谢您的支持！</string>
+    <string name="call_error_message_network_error">网络故障，请重试。</string>
+    <string name="no_network">网络故障，请检查网络后重试。</string>
+    <string name="request_failed">请求失败</string>
+    <string name="download_by_qrcode">让朋友扫码下载</string>
+    <string name="share_to_friends">分享给朋友</string>
+
+    <string name="share_to_wechatmoments">微信朋友圈</string>
+    <string name="share_to_wechat">微信</string>
+    <string name="share_to_qq">QQ</string>
+    <string name="share_to_qzone">QQ空间</string>
+    <string name="share_to_weibo">新浪微博</string>
+    <string name="share_to_others">其他</string>
+    <string name="share">分享应用</string>
+    <string name="other">其他</string>
+
+    <string name="wxnotinstalled">微信版本过低或未安装微信</string>
+    <string name="sinaweibo_not_installed">未安装新浪微博</string>
+    <string name="qzone_not_installed">未安装QQ空间</string>
+    <string name="qq_not_installed">未安装QQ</string>
+    <string name="toast_has_copy_app_detail_for_wechat_moments">已复制分享内容，可在微信朋友圈分享界面粘贴该详情。</string>
+    <string name="share_content">“生活通” - 让生活更精彩一点。下载地址：%1$s</string>
+    <string name="share_document_content">我在生活通APP中阅读了%1$s，你也来看看吧。下载地址：%2$s</string>
+    <string name="default_download_url">http://www.ccaaii.com/shenghuotong/</string>
+
+    <string name="category_fav">收藏榜</string>
+    <string name="category_play">阅读榜</string>
+    <string name="title_baike_category">生活百科</string>
+    <string name="title_tools">生活工具</string>
+    <string name="title_sort">排行榜</string>
+
+    <string name="category_0">生活常识</string>
+    <string name="category_1">生活窍门</string>
+    <string name="category_2">育儿家教</string>
+    <string name="category_3">健康饮食</string>
+    <string name="category_4">运动养生</string>
+    <string name="category_5">美容塑身</string>
+    <string name="category_6">急救常识</string>
+    <string name="category_7">理财投资</string>
+
+    <string name="dialog_login_first_title">未登录</string>
+    <string name="dialog_login_first_msg">您还未登录账号，请先登录后再操作。</string>
+
+    <string name="speech_detail_fav">收藏</string>
+    <string name="speech_detail_fav_exist">已收藏</string>
+    <string name="speech_detail_reply">评论</string>
+    <string name="speech_detail_share">分享</string>
+    <string name="speech_detail_category">分类：%1$s</string>
+    <string name="speech_detail_playcount">阅读：%1$s</string>
+
+    <string name="unit_w">万</string>
+    <string name="no_speech">暂无内容，下拉刷新</string>
+
+    <string name="control_font">字体大小：</string>
+    <string name="toast_add_fav_success">收藏成功</string>
+    <string name="toast_add_fav_failed">收藏失败</string>
+    <string name="toast_remove_fav_failed">解除收藏失败</string>
+
+    <string name="user_reply">用户评论</string>
+    <string name="user_no_reply">暂无用户评论</string>
+    <string name="user_add_star">评分：</string>
+    <string name="user_add_reply_hint">我来说几句</string>
+
+    <string name="no_fav">暂无收藏</string>
+    <string name="no_history">暂无阅读历史</string>
+    <string name="no_reply">暂无评论</string>
+    <string name="no_discover">暂无资讯</string>
+
+    <string name="refresh_failed">刷新失败，请重试</string>
+    <string name="load_more_failed">加载失败，请重试</string>
+
+    <string name="title_search">搜索</string>
+    <string name="hint_search">输入搜索内容</string>
+    <string name="no_search_result">暂无搜索结果</string>
+    <string name="empty_search_text">请输入内容再搜索</string>
+    <string name="title_fav_sort">收藏排行</string>
+    <string name="title_play_sort">阅读排行</string>
+
+    <string name="title_web_view">页面浏览</string>
+    <string name="title_news">资讯推荐</string>
+    <string name="title_travel">热门游记</string>
+    <string name="see_more_introduce">查看更多资讯</string>
+    <string name="see_more_document">查看更多百科知识</string>
+    <string name="see_more_travel">查看更多热门游记</string>
+    <string name="cannot_play_downloading_now">正在缓冲中，请稍后长按播放该段</string>
+    <string name="toast_login_no_select">请先阅读并接受《用户协议》</string>
+    <string name="no_need_update">版本暂无更新</string>
+
+    <string name="title_reply_check">回复审核</string>
+    <string name="msg_reply_check">请选择审核通过或者删除</string>
+    <string name="dialog_allow">通过</string>
+
+    <string name="weekday_0">星期日</string>
+    <string name="weekday_1">星期一</string>
+    <string name="weekday_2">星期二</string>
+    <string name="weekday_3">星期三</string>
+    <string name="weekday_4">星期四</string>
+    <string name="weekday_5">星期五</string>
+    <string name="weekday_6">星期六</string>
+
+    <string name="init_location">定位中...</string>
+    <string name="location_failed">定位失败</string>
+    <string name="weather_con_tmp">%1$s&#160;&#160;&#160;&#160;%2$s℃</string>
+    <string name="weather_wind_hum">%1$s%2$s级&#160;&#160;&#160;&#160;湿度：%3$s</string>
+    <string name="weather_qlty">空气质量：%1$s</string>
+    <string name="weather_aqi">AQI：%1$s&#160;&#160;&#160;&#160;PM2.5：%2$s</string>
+
+    <string name="title_weather">天气</string>
+    <string name="show_weather_failed">获取天气失败，请刷新</string>
+    <string name="weather_show_update_time">更新时间：%1$s</string>
+    <string name="weather_show_qlty">大气压强 [%1$s]</string>
+    <string name="weather_show_aqi">能见度： %1$s 公里</string>
+    <string name="weather_show_wind">%1$s%2$s级</string>
+    <string name="weather_show_hum">湿度：%1$s</string>
+    <string name="weather_today">今天</string>
+
+    <string name="weather_suggestion_drsg">穿衣指数</string>
+    <string name="weather_suggestion_comf">舒适度指数</string>
+    <string name="weather_suggestion_uv">紫外线指数</string>
+    <string name="weather_suggestion_cw">洗车指数</string>
+    <string name="weather_suggestion_trav">旅游指数</string>
+    <string name="weather_suggestion_flu">感冒指数</string>
+    <string name="weather_suggestion_sport">运动指数</string>
+
+    <string name="title_select_city">选择城市</string>
+    <string name="search_city">请输入城市名称或拼音</string>
+    <string name="hot_city">热门城市</string>
+    <string name="loading_more">加载更多</string>
+
+    <string name="sex_m">男</string>
+    <string name="sex_f">女</string>
+    <string name="tools_title_phone">号码归属地</string>
+    <string name="tools_title_ids">身份证查询</string>
+    <string name="tools_title_today_history">今日历史</string>
+    <string name="tools_title_ips">IP查询</string>
+    <string name="tools_title_money">汇率换算</string>
+    <string name="tools_title_calendar">万年历</string>
+    <string name="tools_title_express">快递查询</string>
+    <string name="tools_title_caipiao">彩票开奖</string>
+    <string name="tools_title_car">交通违章</string>
+    <string name="search_mobile">请输入要查询的手机号码</string>
+    <string name="search_ids">请输入要查询的身份证号码</string>
+    <string name="search_ips">请输入要查询的IP地址</string>
+    <string name="search_money">请输入要兑换的货币数量</string>
+    <string name="search_money_unit">请输入货币名字或代码</string>
+    <string name="toast_search_failed">查询失败</string>
+    <string name="search_points">查询中...</string>
+    <string name="search_result">查询结果</string>
+    <string name="search_result_mobile">手机号码：%1$s\n\n运营商：%2$s\n\n所属地：%3$s\n\n类型：%4$s</string>
+    <string name="search_result_ids">身份证号：%1$s\n\n性别：%2$s\n\n出生日期：%3$s\n\n归属地：%4$s</string>
+    <string name="search_result_ips">IP地址：%1$s\n\n运营商：%2$s\n\n详情：%3$s\n\n物理地址：%4$s</string>
+    <string name="search_result_money">日期时间：%1$s\n\n原始货币：%2$s\n\n兑换货币：%3$s\n\n兑换数量：%4$s\n\n当前汇率：%5$s\n\n兑换结果：%6$s</string>
+    <string name="change_result">兑换结果</string>
+    <string name="change_money">兑换</string>
+    <string name="hot_money_unit">常用货币</string>
+    <string name="all_money_unit">所有货币</string>
+    <string name="toast_back_again_to_finish">再按一次返回键退出</string>
+    <string name="today_history_day">今天：%1$s年%2$s月%3$s日</string>
+    <string name="web_page_error">页面访问失败，请检查网络</string>
+    <string name="search_failed">查询失败</string>
+
+</resources>

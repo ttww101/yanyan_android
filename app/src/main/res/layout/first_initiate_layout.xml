@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_dot_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_guide_point" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_guide_point" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_guide_point" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_app_button"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_above="@id/bottom_dot_layout"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/bg_btn_first_start_app"
+        android:text="@string/start_app"
+        android:textColor="@color/white_color"
+        android:textSize="16sp" />
+
+</RelativeLayout>

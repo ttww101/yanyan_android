@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/top_bar_color">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@null"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_speech_category"
+            android:textColor="@color/top_title_color"
+            android:textSize="@dimen/top_title_size" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/document_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent_full"
+            android:cacheColorHint="@color/transparent_full"
+            android:fadingEdge="none"
+            android:dividerHeight="1px"
+            android:divider="@color/home_line_color"
+            android:fastScrollEnabled="false"
+            android:smoothScrollbar="false"
+            android:scrollbars="none"
+            android:listSelector="?android:attr/selectableItemBackground"/>
+
+        <LinearLayout
+            android:id="@+id/query_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white_color"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/query_proLoading"
+                style="@style/QueryLoadingProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@anim/query_loading_gray" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

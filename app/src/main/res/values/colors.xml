@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_color">#ff000000</color>
+    <color name="white_color">#ffffffff</color>
+    <color name="blue_color">#ff0bafde</color>
+    <color name="transparent_blue_color">#3f0bafde</color>
+    <color name="orange_color">#fff48221</color>
+    <color name="green_color">#ff71bf95</color>
+
+    <color name="bg_dialog_title_color">#ff0bafde</color>
+
+    <color name="home_text_deep_color">#ff3f3f3f</color>
+    <color name="home_text_light_color">#ff808080</color>
+    <color name="home_text_high_light_color">#ffa0a0a0</color>
+    <color name="home_text_high_color">#fff0f0f0</color>
+    <color name="home_bg_light_color">#ffe0e0e0</color>
+
+    <color name="home_line_color">#ffe0e0e0</color>
+    <color name="home_listview_line_color">#ffe0e0e0</color>
+    <color name="home_popup_line_color">#fff0f0f0</color>
+
+    <color name="dialog_nav_button_color_nor">#ffc0c0c0</color>
+    <color name="dialog_nav_button_color_pressed">#ffa0a0a0</color>
+    <color name="dialog_pos_button_color_nor">#ff27aae0</color>
+    <color name="dialog_pos_button_color_pressed">#ff1c80a9</color>
+    <color name="info_bottom_blue_button_nor_color">#ff27aae0</color>
+    <color name="info_bottom_blue_button_pressed_color">#ff1c80a9</color>
+    <color name="info_bottom_blue_button_disable_color">#ff93ddfc</color>
+    <color name="info_bottom_orange_button_nor_color">#fff48221</color>
+    <color name="info_bottom_orange_button_pressed_color">#ffc2671a</color>
+    <color name="info_bottom_orange_button_disable_color">#fffbc08f</color>
+    <color name="info_bottom_red_button_nor_color">#ffef3030</color>
+    <color name="info_bottom_red_button_pressed_color">#ffc60202</color>
+    <color name="info_bottom_red_button_disable_color">#ffff7575</color>
+    <color name="info_bottom_green_button_nor_color">#ff2ba40b</color>
+    <color name="info_bottom_green_button_pressed_color">#ff6bd44f</color>
+    <color name="info_bottom_green_button_disable_color">#ffd5f8cb</color>
+    <color name="bg_progress_dialog_color">#9f555555</color>
+
+    <color name="home_bottom_button_color_nor">#ff888888</color>
+    <color name="home_bottom_button_color_pressed">#261758</color>
+
+    <color name="style_color">#13073A</color>
+    <color name="style_pressed_color">#261758</color>
+    <color name="style_disable_color">#fffc867a</color>
+    <color name="top_bar_color">#261758</color>
+    <color name="top_title_color">#ffffffff</color>
+    <color name="home_bg_color">#fff0f0f0</color>
+    <color name="home_bottom_color">#fff0f0f0</color>
+
+    <color name="transparent_full">#00ffffff</color>
+    <color name="item_pressed_color">#ffe0e0e0</color>
+    <color name="divitor_color">#fff0f0f0</color>
+
+    <color name="bg_btn_login_color_nor">#ff0bafde</color>
+    <color name="bg_btn_login_color_pressed">#9fcccccc</color>
+    <color name="home_empty_text_color">#ffe0e0e0</color>
+
+    <color name="speech_content_en_color">#ff555555</color>
+    <color name="speech_content_cn_color">#ff888888</color>
+    <color name="bg_control_layout_color">#efffffff</color>
+    <color name="control_button_color_nor">#fff0f0f0</color>
+    <color name="control_button_color_pressed">#9fb0b0b0</color>
+    <color name="control_button_strike_color_nor">#ff888888</color>
+    <color name="control_button_strike_color_selected">#ff3190e8</color>
+
+    <color name="bg_media_player">#9f333333</color>
+
+    <color name="category_color_0">#db4d3f</color>
+    <color name="category_color_1">#ff8d41c8</color>
+    <color name="category_color_2">#ff45c074</color>
+    <color name="category_color_3">#ffd4d339</color>
+    <color name="category_color_4">#ff4fa8c4</color>
+    <color name="category_color_5">#ffc22e6d</color>
+    <color name="category_color_6">#e10f46</color>
+    <color name="category_color_7">#ffcc7336</color>
+
+    <color name="bg_first_start_app_color_nor">#9f555555</color>
+    <color name="bg_first_start_app_color_pressed">#9fe0e0e0</color>
+    <color name="bg_weather_color">#9f1e121e</color>
+    <color name="weather_update_time_color">#fff0f0f0</color>
+    <color name="high_white_line_color">#3fffffff</color>
+    <color name="high_white">#bfffffff</color>
+    <color name="bg_search_color">#fff0f0f0</color>
+
+    <color name="high_tmp_line_color">#ffffcc00</color>
+    <color name="low_tmp_line_color">#ff00ccff</color>
+
+    <color name="scroll_bar_color">#9f888888</color>
+
+    <color name="kezi_colorAccent">#5cb45f</color>
+
+</resources>

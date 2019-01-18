@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:coolding="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/bottom_layout"
+            android:background="@color/home_line_color"></View>
+
+        <WebView
+            android:id="@+id/wb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+        </WebView>
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@color/top_bar_color">
+
+            <TextView
+                android:id="@+id/home_title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="17dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@color/top_title_color"
+                android:textSize="@dimen/top_title_size" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/empty_view"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_above="@+id/bottom_layout"
+            android:background="@color/white_color"></View>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_color"
+            android:orientation="horizontal"
+            android:paddingTop="3dp">
+
+            <com.ccaaii.base.utils.widgets.HomeBottomButton
+                android:id="@+id/home_bottom_button_home"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                coolding:home_bottom_button_icon="@drawable/icon_bottom_home"
+                coolding:home_bottom_button_text="@string/bottom_home" />
+
+            <com.ccaaii.base.utils.widgets.HomeBottomButton
+                android:id="@+id/home_bottom_button_discovery"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                coolding:home_bottom_button_icon="@drawable/icon_bottom_discovery"
+                coolding:home_bottom_button_text="@string/bottom_discovery" />
+
+            <com.ccaaii.base.utils.widgets.HomeBottomButton
+                android:id="@+id/home_bottom_button_setting"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                coolding:home_bottom_button_icon="@drawable/icon_bottom_my"
+                coolding:home_bottom_button_text="@string/bottom_setting" />
+
+            <com.ccaaii.base.utils.widgets.HomeBottomButton
+                android:id="@+id/home_bottom_button_me"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                coolding:home_bottom_button_icon="@drawable/icon_bottom_my"
+                coolding:home_bottom_button_text="@string/bottom_me" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/category_color_0"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

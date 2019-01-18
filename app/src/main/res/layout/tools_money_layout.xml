@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/top_bar_color">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@null"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tools_title_money"
+            android:textColor="@color/top_title_color"
+            android:textSize="@dimen/top_title_size" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/white_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp">
+
+
+        <LinearLayout
+            android:id="@+id/money_from_layout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_money_button"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/money_from_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="from"
+                android:textColor="@color/home_text_light_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_arrow_down_gray" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/money_button_switch"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@null"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_switch" />
+
+        <LinearLayout
+            android:id="@+id/money_to_layout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_money_button"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/money_to_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="to"
+                android:textColor="@color/home_text_light_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_arrow_down_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/home_line_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/money_edittext"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search_iput2"
+            android:hint="@string/search_money"
+            android:imeOptions="actionSearch"
+            android:inputType="numberDecimal"
+            android:paddingLeft="7dp"
+            android:paddingRight="17dp"
+            android:singleLine="true"
+            android:textSize="14sp"></EditText>
+
+        <Button
+            android:id="@+id/button_change"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/change_money"
+            android:textColor="@color/search_color"
+            android:textSize="16sp"
+            android:layout_marginRight="17dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/home_line_color"></View>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdge="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="@string/change_result"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/home_text_light_color"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@color/home_line_color"></View>
+
+                <TextView
+                    android:id="@+id/search_result_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:padding="7dp"
+                    android:textColor="@color/home_text_deep_color"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/money_select_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="7dp"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingTop="7dp">
+
+                <EditText
+                    android:id="@+id/money_unit_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_search_iput3"
+                    android:hint="@string/search_money_unit"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"></EditText>
+                <ImageButton
+                    android:id="@+id/button_clear"
+                    android:layout_width="@dimen/top_bar_height"
+                    android:layout_height="@dimen/top_bar_height"
+                    android:layout_alignParentRight="true"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    android:background="@null"
+                    android:src="@drawable/icon_clear"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/hot_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/home_bg_color"
+                android:orientation="vertical"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:text="@string/hot_money_unit"
+                    android:textColor="@color/home_text_light_color"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@color/home_line_color"></View>
+
+
+                <com.ccaaii.base.utils.widgets.GridViewForScrollView
+                    android:id="@+id/hot_money_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hot_city_title_view"
+                    android:fadingEdgeLength="0dp"
+                    android:listSelector="?android:attr/selectableItemBackground"
+                    android:numColumns="4"
+                    android:scrollbars="none"></com.ccaaii.base.utils.widgets.GridViewForScrollView>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/home_line_color"></View>
+
+            <ListView
+                android:id="@+id/all_money_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_color"
+                android:cacheColorHint="@color/transparent_full"
+                android:divider="@color/home_line_color"
+                android:dividerHeight="1px"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="false"
+                android:listSelector="?android:attr/selectableItemBackground"
+                android:scrollbars="none"
+                android:smoothScrollbar="true">
+
+
+            </ListView>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>
